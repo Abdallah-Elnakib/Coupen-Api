@@ -28,7 +28,7 @@ app.post('/get-coupen', async (req, res) => {
     await Auth.findOneAndUpdate({username}, {number: number-1});
     const Allcoupen = await Coupen.find();
     const coupen = Allcoupen[0];
-    res.send({"Discount code ": coupen});
+    res.send({"Discount code ": coupen.code});
 });
 
 app.post('/discount', async (req, res) => {
